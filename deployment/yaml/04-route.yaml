@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: libraryweb
+  namespace: wcare-ns
+  labels:
+    app: wcare-application
+    subname: libraryweb
+spec:
+  path: /
+  to:
+    kind: Service
+    name: libraryweb
+    weight: 100
+  port:
+    targetPort: 8080
