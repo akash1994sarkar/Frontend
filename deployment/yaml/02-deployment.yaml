@@ -2,26 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: libraryweb
-  namespace: wcare-ns
+  namespace: library-ns
   labels:
-    app: wcare-application
+    app: library-application
     subname: libraryweb
 spec:
   selector:
     matchLabels:
-      app: wcare-application
+      app: library-application
       subname: libraryweb
   replicas: 1
   template:
     metadata:
       labels:
-        app: wcare-application
+        app: library-application
         subname: libraryweb
     spec:
       containers:
         - name: container-libraryweb
-          image: image-registry.openshift-image-registry.svc:5000/wcare-ns/libraryweb:latest
-          # image: "gandhicloudlab/wcareweb:latest"
+          image: image-registry.openshift-image-registry.svc:5000/library-ns/libraryweb:latest
+          
           imagePullPolicy: Always
           ports:
             - name: 8080-tcp
