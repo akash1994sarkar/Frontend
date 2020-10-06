@@ -2,9 +2,9 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: libraryweb
-  namespace: wcare-ns
+  namespace: library-ns
   labels:
-    app: wcare-application
+    app: library-application
     subname: libraryweb
 spec:
   path: /
