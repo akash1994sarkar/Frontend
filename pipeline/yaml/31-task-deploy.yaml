@@ -11,7 +11,7 @@ spec:
     params:
       - name: pathToDeploymentFiles
         description: Path to deployment yaml files
-        default: /workspace/source-repo/Deployment/yaml/
+        default: /workspace/source-repo/deployment/yaml/
   steps:
     - name: deploy
       image: quay.io/openshift/origin-cli:latest
