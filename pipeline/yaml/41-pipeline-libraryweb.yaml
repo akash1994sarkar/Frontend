@@ -13,7 +13,7 @@ spec:
       
   params:
     - name: pathToDeploymentFiles
-      default: /workspace/source-repo/Deployment/yaml
+      default: /workspace/source-repo/deployment/yaml
   tasks:
     - name: build
       taskRef:
